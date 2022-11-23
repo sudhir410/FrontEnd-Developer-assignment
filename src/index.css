@@ -1,13 +1,171 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+*{
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+a{
+  text-decoration: none;
+  color: black;
+  font-size: 1.1rem;
+  font-weight:500 ;
+  border-radius: 0.5rem;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.loginPage_header{
+  padding: 1rem 2rem ;
+  background-color: rgba(0, 0, 0, 0.859);
+  font-weight: 700;
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  inset: 0;
+  z-index: 100;
+  color: #FFFFFF;
 }
+
+.loginPage_header p{
+  color: #FF4F00;
+  cursor: pointer;
+}
+.signIn_container{
+  display: flex;
+  justify-content: center;
+  padding-top: 3rem;
+  text-align: center;
+}
+.signIn_container div{
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.signIn_container div h3{
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #FF4F00;
+}
+.header_Username{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+.header_Username span{
+ background-color: #FF4F00;
+ /* color: yellow; */
+ padding: 0.2rem 0.3rem;
+ border-radius: 0.4rem;
+}
+
+.post{
+  border: none;
+  padding: 0.5rem 0.9rem ;
+  border-radius: 0.7rem;
+  background-color: #0069D9;
+  color: #F0F8FF;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.post:hover{
+  background-color:  #0454a9;
+  transform: scale(1.05);
+}
+
+.header_Username .logoutBtn{
+  padding: 0.5rem 0.7rem;
+  border-radius: 1rem;
+  background-color: #C82333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.header_Username .logoutBtn:hover{
+  background-color: #ab1827;
+}
+.Post_mainConatiner{
+  padding: 2rem 1rem;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color:#F4F4F4;
+}
+
+@media screen and (max-width:500px){
+  .loginPage_header{
+    padding: 0.1rem;
+    flex-direction: column;
+   gap: 0.5rem;
+  }
+    .header_Username{
+      align-items: flex-start;
+    flex-direction: row;
+    gap: 0.7rem;
+
+    justify-content: center;
+ 
+    }
+}
+
+.postForm_container{
+  background-color: rgba(36, 36, 36, 0.7);
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.postForm_container section{
+  width: 25rem;
+  height: auto;
+  background-color: #FFFFFF;
+  border-radius: 0.45rem;
+}
+
+.postForm_container section header{
+  display: flex;
+  align-items: center;
+  background-color: gray;
+  justify-content: space-between;
+  padding: 0.6rem 0.8rem;
+  border-radius: 0.45rem 0.45rem 0 0 ;
+}
+.postForm_container form{
+  padding: 1rem 1rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.postForm_container form div{
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.postForm_container form div input{
+  border-radius: 0.3rem;
+  padding: 0.4rem;
+  border: 2px solid grey;
+}
+.postForm_btn{
+  margin-top: 1rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  background-color: #0069D9;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+.postForm_btn:hover{
+  background-color: #0454a9;
+}
+
